@@ -1,3 +1,3 @@
 # Curso PHP
 
-### Minuto 14.30 del video
+### Hora 1.15 del video Ejercicio 12
