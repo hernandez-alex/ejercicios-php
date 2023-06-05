@@ -2,9 +2,9 @@
   // ----- 7. Constantes en PHP 00:41:28
 
   $edad = 32; // Definiendo una variable
-  echo $edad."<br>";
+  echo $edad."<br/>";
   $edad = 40; // Cambiando el valor de la variable
-  echo $edad."<br>";
+  echo $edad."<br/>";
 
   // Definiendo una constante
   define("NOMBRE", "Alex");

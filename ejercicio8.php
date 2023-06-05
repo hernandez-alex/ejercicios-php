@@ -5,11 +5,11 @@
 
     // Suma - Resta - Multiplicación - División
     $suma = $valorA + $valorB;
-    echo $valorA." + ".$valorB." = ".$suma."<br>";
+    echo $valorA." + ".$valorB." = ".$suma."<br/>";
     $resta = $valorA - $valorB;
-    echo $valorA." - ".$valorB." = ".$resta."<br>";
+    echo $valorA." - ".$valorB." = ".$resta."<br/>";
     $multiplicacion = $valorA * $valorB;
-    echo $valorA." * ".$valorB." = ".$multiplicacion."<br>";
+    echo $valorA." * ".$valorB." = ".$multiplicacion."<br/>";
     $division = $valorA / $valorB;
     echo $valorA." / ".$valorB." = ".$division;
   }
@@ -26,10 +26,10 @@
   <form action="ejercicio8.php" method="post">
     Valor A:
     <input type="text" name="valorA" id="">
-    <br>
+    <br/>
     Valor B:
     <input type="text" name="valorB" id="">
-    <br>
+    <br/>
     <input type="submit" value="Calcular">
   </form>
 </body>

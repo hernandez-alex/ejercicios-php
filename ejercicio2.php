@@ -20,7 +20,7 @@
   <form action="ejercicio2.php" method="post">
     Nombre
     <input type="text" name="txtNombre" id="">
-    <br>
+    <br/>
     <input type="submit" value="Enviar">
   </form>
 </body>

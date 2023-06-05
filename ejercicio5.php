@@ -18,7 +18,7 @@
   <form action="ejercicio5.php" method="post">
     Nombre:
     <input type="text" name="txtNombre" id="">
-    <br>
+    <br/>
     Apellido:
     <input type="text" name="txtApellido" id="">
     <input type="submit" value="Enviar">
