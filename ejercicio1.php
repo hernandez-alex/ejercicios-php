@@ -1,4 +1,6 @@
+
 <?php
+  // ----- 1. Hola Develoteca 00:06:28
   // Esto es un comentario
   
   echo "Hola Develoteca, utilizando echo";
