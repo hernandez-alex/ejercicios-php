@@ -19,7 +19,8 @@
 
     $txtComentario = (isset($_POST['txtComentario'])) ? $_POST['txtComentario'] : "";
 
-    // print_r($_POST);
+    // Recuerda que aca va tu codigo de programación
+    // Esto es solo un simple ejemplo básico para ir aprendiendo más cosas
   }
 ?>
 
