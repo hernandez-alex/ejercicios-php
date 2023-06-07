@@ -1,3 +1,3 @@
 <?php
-  echo "Hola Develoteca";
+  echo "Hola Develoteca: Función include de PHP";
 ?>
