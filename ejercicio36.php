@@ -7,7 +7,8 @@
 </head>
 <body>
   <!-- El include simplemente incluye código pero no detiene el proceso en caso de error... -->
-  <?php include "ejercicio36_1.php"; ?>
+  <?php include_once "ejercicio36_1.php"; ?>
+  <?php include_once "ejercicio36_1.php"; ?>
   <br/>
   <?php echo "Hola estoy en la página principal"; ?>
 </body>

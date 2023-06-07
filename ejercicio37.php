@@ -8,7 +8,8 @@
 </head>
 <body>
   <!-- El require detiene la ejecución del archivo en caso de error... -->
-  <?php require "ejercicio37_1.php"; ?>
+  <?php require_once "ejercicio37_1.php"; ?>
+  <?php require_once "ejercicio37_1.php"; ?>
   <br/>
   <?php echo "Hola estoy en la página principal"; ?>
 </body>
