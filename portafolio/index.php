@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio</title>
-</head>
-<body>
-  Hola Develoteca, soy tu portafolio
-</body>
-</html>
+<?php include("cabecera.php"); ?>
+  Hola Develoteca, soy tu Index
+<?php include("pie.php"); ?>
