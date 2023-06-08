@@ -2,7 +2,7 @@
 <?php include("conexion.php"); ?>
 <?php
   $objConexion = new conexion();
-  $sql = "SELECT * FROM `proyectos`";
+  $sql = "INSERT INTO `proyectos` (`id`, `nombre`, `imagen`, `descripcion`) VALUES (NULL, 'Proyecto 1', 'imagen.jpg', 'Proyecto de prueba.');";
   $objConexion->ejecutar($sql);
 ?>
 
