@@ -1,6 +1,9 @@
 <?php
+  session_start();
+
   if($_POST){
     if($_POST['usuario'] == 'develoteca' && $_POST['contrasenia'] == "aaaa"){
+      $_SESSION['usuario'] = "develoteca";
       header("location:index.php");
     }else{
       echo "<script>alert('Usuario y/o Contraseña incorrecta!')</script>";
