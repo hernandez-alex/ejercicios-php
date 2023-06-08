@@ -1,4 +1,10 @@
 <?php include("cabecera.php"); ?>
+<?php include("conexion.php"); ?>
+<?php
+  $objConexion = new conexion();
+  $sql = "SELECT * FROM `proyectos`";
+  $objConexion->ejecutar($sql);
+?>
 
   <br/>
 
