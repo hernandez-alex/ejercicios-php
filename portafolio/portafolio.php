@@ -1,9 +1,13 @@
 <?php include("cabecera.php"); ?>
 <?php include("conexion.php"); ?>
 <?php
-  $objConexion = new conexion();
-  $sql = "INSERT INTO `proyectos` (`id`, `nombre`, `imagen`, `descripcion`) VALUES (NULL, 'Proyecto 1', 'imagen.jpg', 'Proyecto de prueba.');";
-  $objConexion->ejecutar($sql);
+  if($_POST){
+    print_r($_POST);
+    $nombre = $_POST['nombre'];
+    $objConexion = new conexion();
+    $sql = "INSERT INTO `proyectos` (`id`, `nombre`, `imagen`, `descripcion`) VALUES (NULL, '$nombre', 'imagen.jpg', 'Proyecto de prueba.');";
+    $objConexion->ejecutar($sql);
+  }
 ?>
 
   <br/>
@@ -18,7 +22,7 @@
           </div>
       
           <div class="card-body">
-            <form action="portafolio.php" method="post">
+            <form action="portafolio.php" method="post" enctype="multipart/form-data" >
               Nombre del Proyecto: <input class="form-control" type="text" name="nombre" id="">
               <br/>
               Imagen del Proyecto: <input class="form-control" type="file" name="archivo" id="">
