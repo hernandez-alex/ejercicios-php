@@ -5,8 +5,13 @@
     print_r($_POST);
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
-    $imagen = $_FILES['archivo']['name'];
-    
+
+    $fecha = new DateTime();
+    $imagen = $fecha->getTimestamp()."_".$_FILES['archivo']['name'];
+    $imagen_temporal = $_FILES['archivo']['tmp_name'];
+
+    move_uploaded_file($imagen_temporal, "imagenes/".$imagen);
+
     $objConexion = new conexion();
     $sql = "INSERT INTO `proyectos` (`id`, `nombre`, `imagen`, `descripcion`) VALUES (NULL, '$nombre', '$imagen', '$descripcion');";
     $objConexion->ejecutar($sql);
