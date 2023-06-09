@@ -2,7 +2,7 @@
 <?php include("conexion.php"); ?>
 <?php
   if($_POST){
-    print_r($_POST);
+    // print_r($_POST);
     $nombre = $_POST['nombre'];
     $objConexion = new conexion();
     $sql = "INSERT INTO `proyectos` (`id`, `nombre`, `imagen`, `descripcion`) VALUES (NULL, '$nombre', 'imagen.jpg', 'Proyecto de prueba.');";
@@ -10,9 +10,8 @@
   }
 
   $objConexion = new conexion();
-  $resultado = $objConexion->consultar("SELECT * FROM `proyectos`");
-
-  print_r($resultado);
+  $proyectos = $objConexion->consultar("SELECT * FROM `proyectos`");
+  // print_r($proyectos);
 ?>
 
   <br/>
@@ -48,14 +47,20 @@
                 <th scope="col">Id</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Imagen</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Acciones</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="">
-                <td>2</td>
-                <td>Aplicación Web</td>
-                <td>imagen.jpg</td>
-              </tr>
+              <?php foreach($proyectos as $proyecto){?>
+                <tr class="">
+                  <td><?php echo $proyecto['id']?></td>
+                  <td><?php echo $proyecto['nombre']?></td>
+                  <td><?php echo $proyecto['imagen']?></td>
+                  <td><?php echo $proyecto['descripcion']?></td>
+                  <td><a href="#" class="btn btn-danger">Eliminar</a></td>
+                </tr>
+              <?php }?>
             </tbody>
           </table>
         </div>
