@@ -8,6 +8,11 @@
     $sql = "INSERT INTO `proyectos` (`id`, `nombre`, `imagen`, `descripcion`) VALUES (NULL, '$nombre', 'imagen.jpg', 'Proyecto de prueba.');";
     $objConexion->ejecutar($sql);
   }
+
+  $objConexion = new conexion();
+  $resultado = $objConexion->consultar("SELECT * FROM `proyectos`");
+
+  print_r($resultado);
 ?>
 
   <br/>
