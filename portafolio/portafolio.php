@@ -75,7 +75,10 @@
                 <tr class="">
                   <td><?php echo $proyecto['id']; ?></td>
                   <td><?php echo $proyecto['nombre']; ?></td>
-                  <td><?php echo $proyecto['imagen']; ?></td>
+                  <td>
+                    <!-- <?php echo $proyecto['imagen']; ?> -->
+                    <img width="100" src="<?php echo "imagenes/".$proyecto['imagen'];?>" alt="">
+                  </td>
                   <td><?php echo $proyecto['descripcion']; ?></td>
                   <td><a href="?borrar=<?php echo $proyecto['id']; ?>" class="btn btn-danger">Eliminar</a></td>
                 </tr>
