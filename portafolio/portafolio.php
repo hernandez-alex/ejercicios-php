@@ -2,7 +2,6 @@
 <?php include("conexion.php"); ?>
 <?php
   if($_POST){
-    print_r($_POST);
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
 
@@ -18,16 +17,18 @@
   }
 
   if($_GET){
-    // DELETE FROM proyectos WHERE `proyectos`.`id` = 14
-    $objConexion = new conexion();
     $id = $_GET['borrar'];
+    $objConexion = new conexion();
+
+    $imagen = $objConexion->consultar("SELECT imagen FROM `proyectos` WHERE id=".$id);
+    unlink("imagenes/".$imagen[0]['imagen']); // Borrar imagen en carpeta
+    
     $sql = "DELETE FROM proyectos WHERE `proyectos`.`id` = ".$id;
-    $objConexion->ejecutar($sql);
+    $objConexion->ejecutar($sql);    
   }
 
   $objConexion = new conexion();
   $proyectos = $objConexion->consultar("SELECT * FROM `proyectos`");
-  // print_r($proyectos);
 ?>
 
   <br/>
