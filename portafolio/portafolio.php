@@ -2,10 +2,13 @@
 <?php include("conexion.php"); ?>
 <?php
   if($_POST){
-    // print_r($_POST);
+    print_r($_POST);
     $nombre = $_POST['nombre'];
+    $descripcion = $_POST['descripcion'];
+    $imagen = $_FILES['archivo']['name'];
+    
     $objConexion = new conexion();
-    $sql = "INSERT INTO `proyectos` (`id`, `nombre`, `imagen`, `descripcion`) VALUES (NULL, '$nombre', 'imagen.jpg', 'Proyecto de prueba.');";
+    $sql = "INSERT INTO `proyectos` (`id`, `nombre`, `imagen`, `descripcion`) VALUES (NULL, '$nombre', '$imagen', '$descripcion');";
     $objConexion->ejecutar($sql);
   }
 
@@ -39,7 +42,9 @@
               <br/>
               Imagen del Proyecto: <input class="form-control" type="file" name="archivo" id="">
               <br/>
-          
+              Descripción:
+              <textarea name="descripcion" id="" rows="3" class="form-control"></textarea>
+              <br/>
               <input class="btn btn-success" type="submit" value="Enviar Proyecto">
           
             </form>
