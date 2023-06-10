@@ -17,7 +17,11 @@
 </head>
 <body>
   <div class="container">
-    <a href="index.php"> Inicio </a> |
-    <a href="portafolio.php"> Portafolio </a> |
-    <a href="cerrar.php"> Cerrar </a>
+    <nav class="navbar navbar-expand navbar-light bg-light">
+        <div class="nav navbar-nav">
+            <a class="btn btn-outline-primary m-2" href="index.php"> Inicio </a>
+            <a class="btn btn-outline-primary m-2" href="portafolio.php"> Portafolio </a>
+            <a class="btn btn-outline-primary m-2" href="cerrar.php"> Cerrar </a>
+        </div>
+    </nav>
     <br/>
